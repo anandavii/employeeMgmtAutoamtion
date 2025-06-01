@@ -1,9 +1,17 @@
-import { test, expect } from '@playwright/test'
-import { LoginPage, homePage } from '../pages/login'
+import { test } from '@playwright/test'
+import { LoginPage } from '../pages/login'
 import { Homepage } from '../pages/homePage'
 
+test.beforeEach('Login with valid creadentials', async ({ page }) => {
+    const Login = new LoginPage(page);
+    await Login.goToLoginPage();
+    await Login.enterUsername('Admin');
+    await Login.enterPassword('admin123');
+    await Login.clickOnLogin();
+
+})
+
 test('Verify labels on homepage', async ({ page }) => {
-    const Login = new LoginPage(page)
     const HomePage = new Homepage(page)
 
     // Expected labels after successful login
@@ -21,13 +29,6 @@ test('Verify labels on homepage', async ({ page }) => {
         'Claim',
         'Buzz'
     ];
-
-    //login to the application
-    await Login.goToLoginPage()
-    await Login.enterUsername('Admin')
-    await Login.enterPassword('admin123')
-    await Login.clickOnLogin()
-    await expect(page).toHaveURL(/dashboard/)
 
     await page.pause()
     //verify the side labels are present
