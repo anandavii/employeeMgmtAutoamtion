@@ -10,7 +10,7 @@ test('admin login', async ({ page }) => {
     await Login.clickOnLogin()
 });
 
-test.only('invalid login 1', async ({ page }) => {
+test('invalid login 1', async ({ page }) => {
     const Login = new LoginPage(page)
 
     await Login.goToLoginPage()
