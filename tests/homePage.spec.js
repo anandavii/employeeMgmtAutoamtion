@@ -30,7 +30,6 @@ test('Verify labels on homepage', async ({ page }) => {
         'Buzz'
     ];
 
-    await page.pause()
     //verify the side labels are present
     await HomePage.verifyHomepageSidelabels(expectedSideLabels)
 
