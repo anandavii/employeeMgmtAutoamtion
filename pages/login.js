@@ -1,13 +1,14 @@
-export class LoginPage {
-    constructorconstructor(page) {
+exports.LoginPage = class LoginPage {
+    constructor(page) {
         this.page = page
         this.username_textbox = page.getByRole('textbox', { name: 'Username' })
         this.password_textbox = page.getByRole('textbox', { name: 'Password' })
         this.login_button = page.getByRole('button', { name: 'Login' })
+        this.invalidCredentials_label = page.getByRole('alert')
     }
 
     async goToLoginPage() {
-        await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        await this.page.goto('https://opensource-demo.orangehrmlive.com/')
     }
 
     async enterUsername(username) {
