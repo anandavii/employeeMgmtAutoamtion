@@ -15,10 +15,8 @@ This framework is designed to simulate a real-world automation approach for web 
 
 ## What’s Implemented So Far
 
-- Page Object Model (POM) for the Login Page
-- Two test cases:
-  - Admin login with valid credentials
-  - Invalid login with an assertion for "Invalid credentials" message
+- Login Page: Validates admin login and handles invalid login attempts.
+- Home Page: Verifies side panel labels and top banner headings after login.
 
 ## Usage
 
