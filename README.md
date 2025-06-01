@@ -10,6 +10,7 @@ This is a Playwright-based Test Automation Framework designed to validate the lo
 - Ensure test scripts are scalable and can be easily extended for additional scenarios.
 - Improve readability and collaboration by using the Page Object Model pattern.
 - Provide a foundation for future enhancements, including reusable fixtures and additional test coverage.
+- Implement continuous integration with GitHub Actions for automatic workflow execution on code changes.
 
 This framework is designed to simulate a real-world automation approach for web applications, focusing on clear separation of concerns and ease of maintenance.
 
@@ -33,6 +34,14 @@ This framework is designed to simulate a real-world automation approach for web 
 - Design Pattern: Page Object Model
 - Browser: Chromium (default), can be configured for Firefox & WebKit
 - Language: JavaScript (no TypeScript for now)
+
+## GitHub Actions CI
+
+This project uses GitHub Actions for **automated test execution** and **manual workflow triggering**.
+
+- The GitHub Actions workflow (`.github/workflows/playwright.yml`) is configured with `workflow_dispatch` to support **manual test runs**.
+- Supports manual trigger of workflow from the GitHub Actions tab by clicking the “Run workflow” button.
+- Automatic triggers on `push` and `pull_request` is added for automatic workflow runs.
 
 ## Next Steps
 - Add more test cases for additional workflows, such as logout and dashboard verification.
