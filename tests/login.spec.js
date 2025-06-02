@@ -9,6 +9,8 @@ test('admin login', async ({ page }) => {
     await Login.enterPassword('admin123')
     await Login.clickOnLogin()
     await expect(page).toHaveURL(/dashboard/)
+    //Logout
+    await Login.logoutUser
 });
 
 test('invalid login 1', async ({ page }) => {

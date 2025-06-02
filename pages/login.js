@@ -5,6 +5,8 @@ exports.LoginPage = class LoginPage {
         this.password_textbox = page.getByRole('textbox', { name: 'Password' })
         this.login_button = page.getByRole('button', { name: 'Login' })
         this.invalidCredentials_label = page.getByRole('alert')
+        this.profilePicture_button = page.getByRole('banner').getByRole('img', { name: 'profile picture' })
+        this.logout_link = page.getByRole('menuitem', { name: 'Logout' })
     }
 
     async goToLoginPage() {
@@ -21,6 +23,11 @@ exports.LoginPage = class LoginPage {
 
     async clickOnLogin() {
         await this.login_button.click()
+    }
+
+    async logoutUser() {
+        await this.profilePicture_button.click()
+        await this.clickOnLogoutLink.click()
     }
 
 }
