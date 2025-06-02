@@ -46,7 +46,7 @@ This project uses GitHub Actions for **automated test execution** and **manual w
 - Automatic triggers on `push` and `pull_request` is added for automatic workflow runs.
 
 ## Next Steps
-- Add more test cases for additional workflows, such as logout and dashboard verification.
+- Add more test cases for additional workflows, such as dashboard verification.
 - Create page objects for additional pages (e.g., Dashboard, Employee List).
 - Implement reusable fixtures for common setup and teardown logic.
 - Explore integrating test reporting tools for better insights.
