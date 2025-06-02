@@ -1,5 +1,11 @@
 # Employee Management Test Automation
 
+[![Playwright](https://img.shields.io/badge/Playwright-JS-green?logo=playwright&logoColor=white)](https://playwright.dev/)
+![Node.js version](https://img.shields.io/badge/Node.js->=18-blue)
+[![Build Status](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml/badge.svg)](https://github.com/anandavii/employeeMgmtAutoamtion/actions/workflows/playwright.yml)
+![Last commit](https://img.shields.io/github/last-commit/anandavii/employeeMgmtAutoamtion)
+
+
 ## Overview
 
 This is a Playwright-based Test Automation Framework designed to validate the login functionality of an Employee Management web application. The framework follows a structured Page Object Model (POM), ensuring modularity, maintainability, and scalability of the test scripts.
