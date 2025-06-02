@@ -20,6 +20,10 @@ exports.LoginPage = class LoginPage {
         await this.login_button.click()
     }
 
+    async clickOnProfilePictureButton() {
+        await this.profilePicture_button.click()
+    }
+
     async logoutUser() {
         await this.profilePicture_button.click()
         await this.clickOnLogoutLink.click()
