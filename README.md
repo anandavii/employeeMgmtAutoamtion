@@ -16,8 +16,10 @@ This framework is designed to simulate a real-world automation approach for web 
 
 ## What’s Implemented So Far
 
-- Login Page: Validates admin login and handles invalid login attempts.
-- Home Page: Verifies side panel labels and top banner headings after login.
+- **Login Page**: Validates admin login and handles invalid login attempts.
+- **Home Page**: Verifies side panel labels and top banner headings after login.
+- **About Page**: Validates about page labels and corresponding values, ensuring that the correct company details are displayed.
+
 
 ## Usage
 
@@ -48,3 +50,5 @@ This project uses GitHub Actions for **automated test execution** and **manual w
 - Create page objects for additional pages (e.g., Dashboard, Employee List).
 - Implement reusable fixtures for common setup and teardown logic.
 - Explore integrating test reporting tools for better insights.
+
+---
