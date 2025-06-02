@@ -17,7 +17,6 @@ test('Validate the labels in About Page', async ({ page }) => {
     const username = 'Admin'
     const password = 'admin123'
     await Login.loginUser(username, password)
-    await Login.clickOnProfilePictureButton()
 
     //click on About Link
     await Login.clickOnProfilePictureButton()
@@ -25,5 +24,4 @@ test('Validate the labels in About Page', async ({ page }) => {
 
     //Verify labels on the About page
     await About.verifyAboutLabels(expectedAboutLabels)
-    await page.pause()
 })
