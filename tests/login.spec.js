@@ -11,7 +11,6 @@ test('Valid admin login', async ({ page }) => {
 })
 test('invalid login 1', async ({ page }) => {
     const Login = new LoginPage(page)
-
     // assign username and password
     const username = 'Admin1'
     const password = 'admin123'
