@@ -13,15 +13,10 @@ exports.LoginPage = class LoginPage {
         await this.page.goto('https://opensource-demo.orangehrmlive.com/')
     }
 
-    async enterUsername(username) {
+    async loginUser(username, password) {
+        await this.page.goto('https://opensource-demo.orangehrmlive.com/')
         await this.username_textbox.fill(username)
-    }
-
-    async enterPassword(password) {
         await this.password_textbox.fill(password)
-    }
-
-    async clickOnLogin() {
         await this.login_button.click()
     }
 

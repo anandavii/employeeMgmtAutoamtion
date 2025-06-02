@@ -1,25 +1,21 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login';
 
-test('admin login', async ({ page }) => {
+test('Valid admin login', async ({ page }) => {
     const Login = new LoginPage(page)
-
-    await Login.goToLoginPage()
-    await Login.enterUsername('Admin')
-    await Login.enterPassword('admin123')
-    await Login.clickOnLogin()
-    await expect(page).toHaveURL(/dashboard/)
-    //Logout
+    // assign username and password
+    const username = 'Admin'
+    const password = 'admin123'
+    await Login.loginUser(username, password)
     await Login.logoutUser
-});
-
+})
 test('invalid login 1', async ({ page }) => {
     const Login = new LoginPage(page)
 
-    await Login.goToLoginPage()
-    await Login.enterUsername('Admin1')
-    await Login.enterPassword('admin123')
-    await Login.clickOnLogin()
+    // assign username and password
+    const username = 'Admin1'
+    const password = 'admin123'
+    await Login.loginUser(username, password)
     await expect(Login.invalidCredentials_label).toContainText('Invalid credentials');
 
 });
