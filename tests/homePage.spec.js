@@ -1,18 +1,16 @@
 import { test } from '@playwright/test'
 import { LoginPage } from '../pages/login'
-import { Homepage } from '../pages/homePage'
+import { HomePage } from '../pages/homePage';
 
 test.beforeEach('Login with valid creadentials', async ({ page }) => {
     const Login = new LoginPage(page);
-    await Login.goToLoginPage();
-    await Login.enterUsername('Admin');
-    await Login.enterPassword('admin123');
-    await Login.clickOnLogin();
-
+    const username = 'Admin'
+    const password = 'admin123'
+    await Login.loginUser(username, password)
 })
 
 test('Verify labels on homepage', async ({ page }) => {
-    const HomePage = new Homepage(page)
+    const Home = new HomePage(page)
 
     // Expected labels after successful login
     const expectedSideLabels = [
@@ -31,6 +29,6 @@ test('Verify labels on homepage', async ({ page }) => {
     ];
 
     //verify the side labels are present
-    await HomePage.verifyHomepageSidelabels(expectedSideLabels)
+    await Home.verifyHomepageSidelabels(expectedSideLabels)
 
 })

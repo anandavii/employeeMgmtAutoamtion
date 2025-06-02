@@ -1,4 +1,4 @@
-exports.LoginPage = class LoginPage {
+export class LoginPage {
     constructor(page) {
         this.page = page
         this.username_textbox = page.getByRole('textbox', { name: 'Username' })
@@ -26,7 +26,7 @@ exports.LoginPage = class LoginPage {
 
     async logoutUser() {
         await this.profilePicture_button.click()
-        await this.clickOnLogoutLink.click()
+        await this.logout_link.click()
     }
 
 }

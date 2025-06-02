@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-exports.Homepage = class HomePage {
+export class HomePage {
     constructor(page) {
         this.page = page
         this.sidedBanner_label = page.locator('nav[aria-label="Sidepanel"] li')
